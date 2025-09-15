@@ -14,22 +14,27 @@ This project focuses on customer segmentation using unsupervised machine learnin
   - `Gender`: Gender of the customer (Male/Female)
   - `Age`: Age of the customer
   - `Annual Income (k$)`: Annual income of the customer in thousands of dollars
-  - `Spending Score (1-100)`: Score assigned by the mall based on customer behavior and spending nature
+  - `Spending Score (1-100)`: Score assigned by the mall based on customer behavior and purchasing data
 - **Size:** 200 entries, 5 columns
 
 ## Approach & Methods
 
 1. **Data Exploration & Cleaning:**
-   - Checked for missing values and data types
-   - Explored distributions of age, income, and spending score
-   - Visualized gender distribution and relationships between features
+   - Inspected data types, missing values, and summary statistics
+   - Explored feature distributions and relationships
 2. **Exploratory Data Analysis (EDA):**
-   - Used histograms, pairplots, and heatmaps to understand feature relationships
-   - Visualized feature distributions and correlations
-3. **Clustering:**
-   - Applied K-Means clustering on selected features (Annual Income and Spending Score)
-   - Used the Elbow Method to determine the optimal number of clusters
-   - Visualized the resulting clusters and centroids
+   - Visualized distributions of Age, Income, and Spending Score
+   - Used pairplots and scatter plots to explore feature relationships
+3. **Clustering Analysis:**
+   - **2D Clustering:**
+     - Clustered customers based on Age & Spending Score, and Annual Income & Spending Score
+     - Used the Elbow Method to determine optimal cluster count
+     - Visualized clusters and centroids
+   - **3D Clustering:**
+     - Clustered using Age, Annual Income, and Spending Score
+     - Visualized clusters in 3D using Plotly for interactive exploration
+   - **Saving Results:**
+     - Cluster labels were added to the dataset and saved as `segmented_customers.csv`
 
 ## How to Run
 
@@ -46,27 +51,33 @@ This project focuses on customer segmentation using unsupervised machine learnin
      - matplotlib
      - seaborn
      - scikit-learn
-     - dabl (for advanced EDA)
-     - missingno (for missing value visualization)
+     - plotly (for 3D visualization)
    - Install with pip:
      ```bash
-     pip install pandas numpy matplotlib seaborn scikit-learn dabl missingno
+     pip install pandas numpy matplotlib seaborn scikit-learn plotly
      ```
 3. **Run the analysis:**
-   - Open `Customer Segmentation Analysis.ipynb` in Jupyter Notebook or VSCode
-   - Run all cells to reproduce the analysis and visualizations
+   - Open `kmeans_clustering_for_customer_data.ipynb` in Jupyter Notebook or VSCode
+   - Run all cells to reproduce the analysis, visualizations, and output files
 
 ## Results & Visualizations
 
 - **Distribution Plots:** Age, Annual Income, and Spending Score
-- **Gender Distribution:** Pie chart of male vs female customers
-- **Pairplots & Heatmaps:** Feature relationships and correlations
-- **Cluster Visualization:**
-  - Scatter plots showing customer clusters based on income and spending score
-  - Centroids of each cluster highlighted
+- **Pairplots & Scatter Plots:** Feature relationships and gender-based analysis
+- **2D Cluster Visualizations:**
+  - Age vs Spending Score
+  - Annual Income vs Spending Score
+- **3D Cluster Visualization:**
+  - Interactive 3D plot of clusters based on Age, Income, and Spending Score (using Plotly)
 - **Key Insights:**
-  - Customers can be grouped into distinct segments based on their spending habits and income
-  - These segments can be targeted with tailored marketing strategies
+  - Multiple distinct customer segments identified
+  - 2D and 3D clustering provide deeper insights for targeted marketing
+  - Segmentation results saved for further business use
+
+## Output
+
+- **Segmented Customers File:**
+  - `segmented_customers.csv` contains the original data with an added `cluster` column indicating the assigned segment for each customer.
 
 ## Requirements
 
@@ -77,10 +88,6 @@ This project focuses on customer segmentation using unsupervised machine learnin
 ## Credits
 
 - Dataset: [Mall Customer Segmentation Data](https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python)
-- Analysis and notebook by [Your Name]
-
----
-
-Feel free to use, modify, and contribute to this project!
+- Analysis and notebook by **Adarsh Shukla**
 
 
