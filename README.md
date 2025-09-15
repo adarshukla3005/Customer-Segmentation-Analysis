@@ -4,6 +4,8 @@
 
 This project focuses on customer segmentation using unsupervised machine learning techniques, specifically K-Means clustering. The goal is to analyze customer data from a mall to identify distinct groups of customers based on their demographic and behavioral attributes. These insights can help businesses target marketing strategies more effectively and understand their customer base.
 
+<img width="780" height="370" alt="image" src="https://github.com/user-attachments/assets/fd63ff71-e720-4f68-b859-1a021ae1c3dd" />
+
 ## Dataset Description
 
 - **File:** `Customers.csv`
@@ -80,3 +82,4 @@ This project focuses on customer segmentation using unsupervised machine learnin
 ---
 
 Feel free to use, modify, and contribute to this project!
+
